@@ -1,0 +1,62 @@
+<mat-card class="main-card" fxLayout="column" fxLayoutGap="4px" fxLayoutAlign="center center">
+
+
+    <img alt="avatar" src="../../../assets/bgFinal.png" mat-card-avatar />
+    <mat-card-content>
+        <form [formGroup]="confirmationForm">
+
+            <mat-form-field>
+                <mat-label for="'fullName" title="fullName"> fullname:</mat-label>
+                <input matInput formControlName="fullName" placeholder="full name" />
+            </mat-form-field>
+
+            <mat-form-field fxLayout="row" fxFlex.gt-lg="60%">
+                <mat-label for="'userName" title="userName"> username: </mat-label>
+                <input matInput formControlName="username" placeholder="username" />
+            </mat-form-field>
+
+
+            <mat-form-field fxLayout="row" class="two one">
+                <mat-label for="'password" title="password">password:</mat-label>
+                <input matInput formControlName="password" placeholder="password" />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>firstname </mat-label>
+                <input matInput formControlName="firstname" placeholder="full name" />
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <mat-label>lastname </mat-label>
+                <input matInput formControlName="lastname" placeholder="username" />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label for="'confirmPassword">
+                    age
+                </mat-label>
+
+                <input matInput formControlName="age" placeholder=" password" />
+            </mat-form-field>
+            <form formGroupName="address">
+                <mat-form-field appearance="fill">
+                    <mat-label>country</mat-label>
+                    <input type="text" matInput formControlName="countryOfBirth" placeholder="city">
+
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>country</mat-label>
+                    <input type="text" matInput formControlName="address" placeholder="city">
+
+                </mat-form-field>
+
+            </form>
+        </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <!-- <button mat-raised-button color="warm">Confirm</button>
+        <button mat-raised-button color="primary">Reset</button> -->
+    </mat-card-actions>
+</mat-card>

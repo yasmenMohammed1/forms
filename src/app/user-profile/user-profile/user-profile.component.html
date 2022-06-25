@@ -1,0 +1,44 @@
+<mat-card fxLayout="column">
+
+
+    <img alt="avatar" src="../../../assets/bguser.png" mat-card-avatar />
+    <mat-card-content>
+        <form [formGroup]="userForm" class="formCard">
+
+            <mat-form-field fxLayout="row">
+                <mat-label>firstname </mat-label>
+                <input matInput id="fullName" formControlName="firstname" placeholder="full name" />
+            </mat-form-field>
+
+
+            <mat-form-field fxLayout="row">
+                <mat-label>lastname </mat-label>
+                <input matInput id="userName" formControlName="lastname" placeholder="username" />
+            </mat-form-field>
+
+            <mat-form-field fxLayout="row">
+                <mat-label for="'confirmPassword">
+                    age
+                </mat-label>
+
+                <input matInput id="confirmPassword" formControlName="age" placeholder=" password" />
+            </mat-form-field>
+            <form formGroupName="address">
+                <mat-form-field appearance="fill" fxLayout="row">
+                    <mat-label>country</mat-label>
+                    <input type="text" [value]="selectedCountry" matInput [matAutocomplete]="auto"
+                        formControlName="countryOfBirth" placeholder="city">
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of options || null" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+                <mat-form-field appearance="fill" fxLayout="row">
+                    <mat-label>address</mat-label>
+                    <textarea matInput placeholder="enter your address here" formControlName="address"></textarea>
+                </mat-form-field>
+            </form>
+        </form>
+    </mat-card-content>
+</mat-card>
